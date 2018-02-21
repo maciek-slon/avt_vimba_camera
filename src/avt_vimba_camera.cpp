@@ -934,7 +934,7 @@ void AvtVimbaCamera::updateGainConfig(Config& config) {
   bool changed = false;
   if (config.gain != config_.gain || on_init_) {
     changed = true;
-    setFeatureValue("Gain", static_cast<float>(config.gain));
+    setFeatureValue("GainRaw", static_cast<int>(config.gain));
   }
   if (config.gain_auto != config_.gain_auto || on_init_) {
     changed = true;
